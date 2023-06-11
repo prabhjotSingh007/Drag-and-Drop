@@ -1,0 +1,210 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+    text-transform: capitalize;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-color:grey;
+    animation-name: backgroungcolor;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+@keyframes backgroungcolor{
+    0%{
+background-color: rgb(78, 66, 66);
+    }
+    25%{
+    background-color: rgb(163, 154, 123);
+
+    }
+    75%{
+        background-color: rgb(121, 160, 160);
+
+    }
+    100%{
+        background-color: rgb(77, 79, 92);
+
+    }
+}
+
+.container{
+    width: 100%;
+    min-height: 75vh;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#left,#right{
+    width: 300px;
+    min-height: 400px;
+    margin: 20px;
+    border: 2px dashed black;
+}
+.list{
+    background-color: rgb(210, 218, 235);
+    color: black;
+    height: 60px;
+    margin: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    
+}
+.pngImg{
+    height: 25px;
+    width: 25px;
+    margin-right: 5px;
+}
+.listItem{
+    background-color: rgb(161, 185, 236);
+    color: black;
+    height: 60px;
+    margin: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    font-family: cursive;
+
+    
+}
+.dropend{
+    background-color: aqua;
+    color: black;
+}
+
+.clickOnBtn{
+   width: 100vw;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+}
+#btn{
+    height: 50px;
+    width: 120px;
+    border-radius: 30px;
+    border: 1px solid black;
+    font-family: cursive;
+    font-weight: bold;
+}
+#btn:hover{
+    cursor: pointer;
+    animation-name: btnAni;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+@keyframes btnAni {
+    0%{
+        background-color: white;
+    }
+    25%{
+        background-color: rgb(207, 237, 245);
+    }
+    50%{
+        background-color: rgb(236, 248, 212);
+    }
+    75%{
+        background-color: rgb(213, 240, 248);
+    }
+    100%{
+        background-color: white;
+    }
+    
+}
+#messageContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    /* border: 1px solid black; */
+}
+.message{
+    display: none;
+}
+.messageAlert{
+   
+   display: block;
+   
+   height: 80px;
+    width: 300px;
+    background-color: white;
+    border-radius: 45px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    font-family: cursive;
+    font-size: 25px;
+    animation-name: fadeIn ;
+    animation-duration: 2s;
+  
+    
+    
+}
+@keyframes fadeIn {
+   from{
+       opacity: 0;
+   }
+   to{
+       opacity: 1;
+   }
+}
+.messageAlert1{
+    display: block;
+   
+   height: 80px;
+    width: 300px;
+    background-color: white;
+    border-radius: 45px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    font-family: cursive;
+    font-size: 25px;
+       animation-name: fadeOut;
+    animation-duration: 1s; 
+    
+}
+    
+
+ @keyframes fadeOut {
+    from{
+        opacity: 1;
+
+    }
+    to{
+        opacity: 0;
+    }
+    
+}    
+
+@media all and (max-width:550px){
+    .container{
+        display: block;
+        position: relative;
+       margin-left: auto;
+       margin-right: auto;
+    }
+    #left,#right{
+        width: 230px;
+        margin-left: auto;
+    margin-right: auto;
+    }
+}
+@media all and (max-width:700px) {
+    #left,#right{
+        width :230px
+    }
+    
+}
